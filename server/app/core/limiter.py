@@ -49,7 +49,7 @@ def timeout():
                 return await asyncio.wait_for(
                     func(*args, **kwargs), timeout=settings.example_timeout
                 )
-            except asyncio.TimeoutError as e:
+            except TimeoutError as e:
                 raise HTTPException(
                     status_code=status.HTTP_504_GATEWAY_TIMEOUT,
                     detail="Request timed out. Please try a smaller area.",

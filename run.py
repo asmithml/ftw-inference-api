@@ -11,18 +11,18 @@ import os
 import sys
 from pathlib import Path
 
+import uvicorn
+from app.core.config import get_settings
+
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 
 # Add server directory to Python path
 server_dir = Path(__file__).parent / "server"
 sys.path.insert(0, str(server_dir))
 
-import uvicorn
-from app.core.config import get_settings
 
 if __name__ == "__main__":
     # Change to server directory for relative paths to work

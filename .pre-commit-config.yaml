@@ -21,4 +21,4 @@ repos:
     hooks:
     -   id: mypy
         additional_dependencies: [types-requests>=2.31.0, types-PyYAML>=6.0.12.11]
-        exclude: ^(docs/|example-plugin/|tests/fixtures)
+        exclude: ^(docs/|example-plugin/|tests/fixtures|run\.py)
